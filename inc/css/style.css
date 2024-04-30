@@ -1,0 +1,170 @@
+
+
+body {
+    background-color: #121212;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    
+}
+
+#btn-submit {
+    background-color: #03DAC6;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.input {
+    background-color: #03DAC6;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+#btn-submit{
+  transition: 0.3s;
+}
+
+
+#btn-submit:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+#srch-ctn {
+  position: relative;
+  border-radius: 6px;
+  width: 1200px;
+  padding: 20px;
+  background-color: #1E1E1E;
+  margin: 0 auto;
+  
+}
+
+#navbar-ctn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar {
+    background-color: #1E1E1E;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    width: 900px;
+    
+
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#navbar ul li {
+  list-style: none;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 9px;
+  background-color: #BB86FC;
+  text-align: center;
+  transition: 0.3s;
+}
+
+#navbar ul li:hover {
+  transform: scale(1.1) translateY(-5px);
+  background-color: #03DAC6;
+}
+
+#navbar ul svg {
+  margin-left: 60px;
+  transition: 0.3s;
+}
+
+#navbar ul svg:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #121212;
+  font-weight: 700;
+  
+  
+}
+
+table {
+  width: 100%;
+  margin: 10px 0;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-clip: padding-box;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+  
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+th {
+  background-color: #BB86FC;
+  color: #121212;
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  font-weight: 700;
+  margin: 15px 0 15px 10px;
+}
+
+h2 {
+  margin: 15px 0 0 10px;
+}
+
+p {
+  margin: 15px 0 100px 10px;
+  width: fit-content;
+}
+
+
+
+@keyframes bounce {
+  0% { transform: translateX(0) translateY(0); }
+  10% { transform: translateX(5vw) translateY(-50px); }
+  20% { transform: translateX(10vw) translateY(0); }
+  30% { transform: translateX(15vw) translateY(-50px); }
+  40% { transform: translateX(20vw) translateY(0); }
+  50% { transform: translateX(25vw) translateY(-50px); }
+  60% { transform: translateX(30vw) translateY(0); }
+  70% { transform: translateX(35vw) translateY(-50px); }
+  80% { transform: translateX(40vw) translateY(0); }
+  90% { transform: translateX(45vw) translateY(-50px); }
+  100% { transform: translateX(100vw) translateY(0); }
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background:  url("http://localhost/jo/inc/img/ballon-de-basket.png") no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  animation: bounce 4s ease-in-out forwards;
+}
