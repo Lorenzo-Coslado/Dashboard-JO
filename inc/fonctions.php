@@ -40,6 +40,24 @@ function printAllVilles($pdo, $query){
     echo "</table>";
 }
 
+function printAllLieux($pdo, $query){
+    echo "<br>";
+    echo "<table border='1'>";
+    echo "<tr><th>Nom du lieu</th> <th>Paralympique</th>";
+
+    while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+        echo "<tr>";
+        echo "<td>" . $row['lieu'] . "</td>";
+        if ($row["Site paralympique"] == 1)
+            echo "<td>Site Paralympique</td>";
+        else
+            echo "<td></td>";
+        echo "</tr>";
+    }
+
+    echo "</table>";
+}
+
 function printAllDates($pdo, $query){
     echo "<br>";
     echo "<table border='1'>";
@@ -102,14 +120,15 @@ function printAllSearch($pdo, $query){
     else {
         
         echo "<br>";
+        echo "<form action='recherche.php' method='post'>";
         echo "<table border='1'>";
         echo "<tr><th>Date</th><th>Ville</th><th>Sport</th><th>Début</th><th>Fin</th><th>Lieu</th><th>Détails</th>";
 
         foreach ($rows as $row) {
             echo "<tr>";
-            echo "<td>" . $row['date'] . "</td>";
-            echo "<td>" . $row['ville'] . "</td>";
-            echo "<td>" . $row['nom'] . "</td>";
+            echo "<td><input type='submit' id = btn-search name = dates value='" . $row['date'] . "'></td>";
+            echo "<td><input type='submit' id = btn-search name = villes value='" . $row['ville'] . "'></td>";
+            echo "<td><input type='submit' id = btn-search name = sports value='" . $row['nom'] . "'></td>";
             echo "<td>" . $row['debut'] . "</td>";
             echo "<td>" . $row['fin'] . "</td>";
             echo "<td>" . $row['lieu'] . "</td>";
