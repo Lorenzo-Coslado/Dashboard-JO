@@ -1,10 +1,30 @@
 <?php
 require 'inc/connexion/connexion.php';
 require 'inc/fonctions.php';
-$dates = $_POST['dates'];
-$villes = $_POST['villes'];
-$sports = $_POST['sports'];
-$lieux = $_POST['lieux'];
+
+if (isset($_POST['dates'])){
+    $dates = $_POST['dates'];
+}else{
+    $dates = NULL;
+}
+
+if (isset($_POST['villes'])){
+    $villes = $_POST['villes'];
+}else{
+    $villes = NULL;
+}
+
+if (isset($_POST['sports'])){
+    $sports = $_POST['sports'];
+}else{
+    $sports = NULL;
+}
+
+if (isset($_POST['lieux'])){
+    $lieux = $_POST['lieux'];
+}else{
+    $lieux = NULL;
+}
 
 if ($dates == "") {
     $dates = NULL;
