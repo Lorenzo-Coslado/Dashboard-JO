@@ -17,15 +17,7 @@ body {
     font-weight: 700;
 }
 
-.input {
-    background-color: #03DAC6;
-    border: none;
-    padding: 10px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 10px;
-    font-weight: 700;
-}
+
 #btn-submit{
   transition: 0.3s;
 }
@@ -167,4 +159,19 @@ p {
   position: absolute;
   bottom: 0;
   animation: bounce 4s ease-in-out forwards;
+}
+
+.btn-search{
+  border: none;
+  background-color: transparent; /* rendre le fond transparent */
+  color: inherit; /* hériter de la couleur du texte de son parent */
+  cursor: pointer; /* changer le curseur au survol */
+  padding: 0; /* supprimer le rembourrage par défaut */
+  font-size: inherit; /* hériter de la taille de police du parent */
+  font-family: inherit; /* hériter de la police du parent */
+  text-decoration: underline;
+}
+
+.btn-search:hover {
+  color: #03DAC6;
 }

@@ -23,7 +23,7 @@ require 'inc/fonctions.php';
         ?>
         <h2>Tous les sports ⛹🏽</h2>
         <?php
-        printAllSearch($pdo, getTableSearch($pdo, NULL, NULL, NULL));
+        printAllSearch($pdo, getTableSearch($pdo, NULL, NULL, NULL, NULL));
         ?>
     </div>
     <script src="inc/js/updateSelector.js"></script>

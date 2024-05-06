@@ -4,6 +4,7 @@ require 'inc/fonctions.php';
 $dates = $_POST['dates'];
 $villes = $_POST['villes'];
 $sports = $_POST['sports'];
+$lieux = $_POST['lieux'];
 
 if ($dates == "") {
     $dates = NULL;
@@ -13,6 +14,9 @@ if ($villes == "") {
 }
 if ($sports == "") {
     $sports = NULL;
+}
+if ($lieux == "") {
+    $lieux = NULL;
 }
 
 ?>
@@ -37,7 +41,7 @@ if ($sports == "") {
         ?>
         <h2>Résultat de la recherche 🔍</h2>
     <?php
-    printAllSearch($pdo, getTableSearch($pdo, $villes, $dates, $sports));
+    printAllSearch($pdo, getTableSearch($pdo, $villes, $dates, $sports, $lieux));
     ?>
     <script>
     var resultNull = document.getElementById('resultNull');
